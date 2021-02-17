@@ -1,0 +1,155 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<div style="text-align: center">
+    <h1>{{message}}</h1>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <form #addNewForm="ngForm" (ngSubmit)="registerNow(addNewForm)">
+                <fieldset>
+                    <legend class="text-center">Valid information is required to register. <span class="req"><small>
+                                required *</small></span></legend>
+
+                                <div class="form-group">
+                                  <label for="Name"><span class="req">* </span>Your </label>&nbsp;
+
+                                        <label class="radio-inline">
+                                       <input type="radio" name="Ms" value="ms" [(ngModel)]="user.your" name="maritalstatus">Ms
+                                    </label>
+                                    <label class="radio-inline">
+                                      <input type="radio" name="Mr"  value="mr" [(ngModel)]="user.your" name="maritalstatus">Mr
+                                   </label>
+                                   <label class="radio-inline">
+                                    <input type="radio" name="Mrs"  value="mrs" [(ngModel)]="user.your" name="maritalstatus">Mrs
+                                 </label>
+                                 <label class="radio-inline">
+                                  <input type="radio" name="master"  value="master" [(ngModel)]="user.your" name="maritalstatus">Master
+                               </label>
+                                  </div>
+
+
+                              <div class="form-group">
+                        <label for="Name"><span class="req">* </span> first Name: <small>enter your name</small> </label>
+                        <input required type="text" [(ngModel)]="user.firstName" name="firstname"
+                            class="form-control phone" maxlength="28" placeholder="Enter your fullname..." />
+                    </div>
+
+                    <div class="form-group">
+                      <label for="Name"><span class="req">* </span> Last Name: <small>enter your name</small> </label>
+                      <input required type="text" [(ngModel)]="user.lastName" name="lastname"
+                          class="form-control phone" maxlength="28" placeholder="Enter your Lastname..." />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="firstname"><span class="req">* </span> BirthDate: </label>
+                    <input class="form-control" type="date" [(ngModel)]="user.dateOfBirth" name="email" id="txt" required
+                        placeholder="Enter valid email address" />
+                    <div id="errFirst"></div>
+                </div>
+
+                <div class="form-group">
+                  <label for="firstname"><span class="req">* </span> Age: </label>
+                  <input class="form-control" type="text" [(ngModel)]="user.age" name="email" id="txt" required
+                      placeholder="Enter Your Age" />
+                  <div id="errFirst"></div>
+              </div>
+
+                  <div class="form-group">
+                    <label for="Name"><span class="req">* </span> Patient Guardian: <small>enter your name</small> </label>
+                    <input required type="text" [(ngModel)]="user.patientGuardian" name="patientguardian"
+                        class="form-control phone" maxlength="28" placeholder="Enter your fullname..." />
+                </div>
+
+                <div class="form-group">
+                  <label for="Name"><span class="req">* </span> Marital Status: <small>enter your name</small> </label>
+                  <input required type="text" [(ngModel)]="user.martialStatus" name="maritalstatus"
+                      class="form-control phone" maxlength="28" placeholder="Enter your fullname..." />
+              </div>
+
+              <div class="form-group">
+                <label for="Name"><span class="req">* </span> Consanguity :- (Combo) (Show only for Peads): <small>enter your name</small> </label>
+              </div>
+<div>
+                    <label class="radio-inline">
+                     <input type="radio" name="male" value="Yes"  [(ngModel)]="user.consanguity" name="consanguity">Yes
+                  </label>
+                </div>
+                  <div>  <label class="radio-inline">
+                    <input type="radio" name="female"  value="No"  [(ngModel)]="user.consanguity" name="consanguity">No
+                 </label> </div>
+
+
+            <div class="form-group">
+              <label for="Name"><span class="req">* </span>Gender </label>
+                  <div>
+                    <label class="radio-inline">
+                   <input type="radio" name="male" value="male" [(ngModel)]="user.gender" name="maritalstatus">Male
+                </label> </div>
+                <div>  <label class="radio-inline">
+                  <input type="radio" name="female"  value="female" [(ngModel)]="user.gender" name="maritalstatus">Femmale
+               </label> </div>
+              </div>
+
+          <div class="form-group">
+            <label for="Name"><span class="req">* </span> Lateralization: <small>enter your name</small> </label>
+            <div>
+              <label class="radio-inline">
+             <input type="radio" name="male" value="male" [(ngModel)]="user.lateralization" name="lateralization">Right
+          </label> </div>
+          <div>  <label class="radio-inline">
+            <input type="radio" name="female"  value="female" [(ngModel)]="user.lateralization" name="lateralization">Left
+         </label> </div>
+        </div>
+
+        <div class="form-group">
+          <label for="Name"><span class="req">* </span> occupation: <small>enter your name</small> </label>
+          <input required type="text" [(ngModel)]="user.occupation" name="occupation"
+              class="form-control phone" maxlength="28" placeholder="Enter your fullname..." />
+      </div>
+
+
+      <div class="form-group">
+        <label for="Name"><span class="req">* </span> wpnumber: <small>enter your name</small> </label>
+        <input required type="text" [(ngModel)]="user.wpnumber" name="wpnumber"
+            class="form-control phone" maxlength="28" placeholder="Enter your fullname..." />
+    </div>
+
+    <div class="form-group">
+      <label for="Name"><span class="req">* </span> Other Number: <small>enter your name</small> </label>
+      <input required type="text" [(ngModel)]="user.othernumber" name="othernumber"
+          class="form-control phone" maxlength="28" placeholder="Enter your fullname..." />
+       </div>
+                    <div class="form-group">
+                        <label for="firstname"><span class="req">* </span> Email: </label>
+                        <input class="form-control" type="text" [(ngModel)]="user.emailAddress" name="email" id="txt" required
+                            placeholder="Enter valid email address" />
+                        <div id="errFirst"></div>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="firstname"><span class="req">* </span> Adresss: </label>
+                      <input class="form-control" type="text" [(ngModel)]="user.address" name="email" id="txt" required
+                          placeholder="Enter valid email address" />
+                      <div id="errFirst"></div>
+                  </div>
+                  <div class="form-group">
+                    <input class="btn btn-success" type="submit" name="submit_reg" value="Register" (click)="registerNow(addNewForm)">
+                </div>
+
+
+
+
+                </fieldset>
+            </form><!-- ends register form -->
+            <!-- second for to fiter user-->
+        </div><!-- ends col-6 -->
+
+    </div>
+</div>
+
+
+

@@ -1,0 +1,33 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "name": "vish",
+      "email": "vishal.landge@usdservices.in",
+      "experience": "0fg",
+      "domain": "fff",
+      "id": 2
+    },
+    {
+      "name": "vish",
+      "email": "vishal.landge@usdservices.in",
+      "experience": "0fg",
+      "domain": "fff",
+      "id": 3
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+
+  }
+}

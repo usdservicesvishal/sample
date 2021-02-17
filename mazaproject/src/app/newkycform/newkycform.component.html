@@ -1,0 +1,150 @@
+<p>newkycform works!</p>
+<!-- <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+---- Include the above in your HEAD tag -------- -->
+
+<div class="container">
+  <form class="form-horizontal" role="form">
+    <form [formGroup]="reciptionForm" (ngSubmit)="postData();">
+      <h2 class="text-center">Registration Form</h2>
+
+      <div class="form-group">
+        <label for="firstName" class="col-sm-3 control-label">First Name</label>
+        <div class="col-sm-9">
+            <input type="text" id="firstname" placeholder="firstname" class="form-control" name="firstname" formControlName="firstname" autofocus>
+
+        </div>
+    </div>
+
+      <div class="form-group">
+        <label for="firstName" class="col-sm-3 control-label">Last Name</label>
+        <div class="col-sm-9">
+            <input type="text" id="lastName" placeholder="lastName" class="form-control" name="lastName" formControlName="lastname" autofocus>
+
+        </div>
+    </div>
+    <div class="form-group">
+      <label for="birthdate" class="col-sm-3 control-label">Date of Birth</label>
+      <div class="col-sm-9">
+          <input type="date" id="birthdate" class="form-control" name="birthdate" formControlName="birthdate">
+      </div>
+  </div>
+
+  <div class="form-group">
+    <label for="patientguardian" class="col-sm-3 control-label">Patient Guardian</label>
+    <div class="col-sm-9">
+        <input type="text" id="patientguardian" placeholder="patientguardian" class="form-control" name="patientguardian"  formControlName="patientguardian" autofocus>
+
+    </div>
+</div>
+
+<div class="form-group">
+  <label for="maritalstatus" class="col-sm-3 control-label">Marital Status</label>
+  <div class="col-sm-9">
+      <input type="text" id="maritalstatus" placeholder="maritalstatus" class="form-control" name="maritalstatus"  formControlName="maritalstatus" autofocus>
+
+  </div>
+</div>
+
+
+<div class="form-group">
+<label for="firstName" class="col-sm-3 control-label">Consanguity :- (Combo) (Show only for Peads)</label>
+  <div>
+      <label class="radio-inline">
+          <input type="radio" id="femaleradio" value="Female" formControlName="femaleradio" >Female
+      </label>
+  </div>
+
+      <label class="radio-inline">
+          <input type="radio" id="maleradio" value="Male" formControlName="maleradio" >Male
+      </label>
+       </div>
+
+       <div class="form-group">
+        <label class="control-label col-sm-3">Gender</label>
+        <div class="col-sm-6">
+            <div class="row">
+                <div class="col-sm-4">
+                    <label class="radio-inline">
+                        <input type="radio" id="femaleRadio" value="Female" formControlName="maleradio">Female
+                    </label>
+                </div>
+                <div class="col-sm-4">
+                    <label class="radio-inline">
+                        <input type="radio" id="maleRadio" value="Male" formControlName="maleradio">Male
+                    </label>
+                </div>
+                <div class="col-sm-4">
+                    <label class="radio-inline">
+                        <input type="radio" id="uncknownRadio" value="Unknown"  formControlName="femaleRadio">Unknown
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div> <!-- /.form-group -->
+
+
+    <div class="form-group">
+      <label for="firstName" class="col-sm-3 control-label">Lateralization </label>
+
+        <div>
+            <label class="radio-inline">
+                <input type="radio" id="rightradio" value="right" formControlName="right">Right
+            </label>
+            <label class="radio-inline">
+                <input type="radio" id="leftradio" value="left" formControlName="left">Left
+            </label>
+             </div>
+
+             <div class="form-group">
+              <label for="occupation" class="col-sm-3 control-label">Occupation </label>
+              <div class="col-sm-9">
+                  <input type="text" id="occupation" placeholder="occupation" class="form-control" name="occupation" formControlName="occupation" autofocus>
+
+              </div>
+          </div>
+<h3 class="text-center" >Contact Details</h3>
+<div class="form-group">
+<label for="firstName" class="col-sm-3 control-label">What’s App mobile No</label>
+          <div class="col-sm-9">
+              <input type="text" id="wpnumber" placeholder="wpnumber" class="form-control" name="wpnumber" formControlName="wpnumber" autofocus>
+            </div></div>
+
+              <div class="form-group">
+        <label for="othernumber" class="col-sm-3 control-label">Communication Mobile No </label>
+          <div class="col-sm-9">
+              <input type="text" id="othernumber" placeholder="othernumber" class="form-control" name="othernumber" formControlName="othernumber" autofocus>
+            </div></div>
+              <div class="form-group">
+
+          <label for="email" class="col-sm-3 control-label">Email</label>
+          <div class="col-sm-9">
+              <input type="email" id="email" placeholder="Email" class="form-control" name="
+              emailid" formControlName="emailid">
+          </div>
+      </div>
+
+      <div class="form-group">
+        <label for="Address" class="col-sm-3 control-label">Address</label>
+                            <div class="col-sm-9">
+                                <input type="text" id="address" placeholder="Address" class="form-control" name="address" formControlName="address" autofocus>
+                              </div></div>
+
+      </div> <!-- /.form-group -->
+      <div class="form-group">
+          <div class="col-sm-9 col-sm-offset-3">
+              <div class="checkbox">
+                  <label>
+                      <input type="checkbox">I accept <a href="#" formControlName="agreeterm">terms</a>
+                  </label>
+              </div>
+          </div>
+      </div> <!-- /.form-group -->
+      <div class="form-group">
+          <div class="col-sm-9 col-sm-offset-3">
+              <button type="submit" class="btn btn-primary btn-block">Register</button>
+          </div>
+      </div>
+
+

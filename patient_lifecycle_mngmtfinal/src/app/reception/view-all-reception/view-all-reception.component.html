@@ -1,0 +1,57 @@
+
+
+
+
+<div id="demo">
+    <table class="table border=1">
+        <thead>
+          <tr>
+            <th>userId</th>
+    <th>your</th>
+    <th>firstName</th>
+    <th>lastName</th>
+    <th>dateOfBirth</th>
+    <th>age</th>
+    <th>patientGuardian</th>
+    <th>martialStatus</th>
+    <th>height</th>
+    <th>weight</th>
+    <th>consanguity</th>
+    <th>gender</th>
+    <th>lateralization</th>
+    <th>occupation</th>
+    <th>whatsNumber</th>
+    <th>othernumber</th>
+    <th>emailAddress</th>
+    <th>address</th>
+          </tr>
+        </thead>
+        <tbody >
+          <tr *ngFor="let rec of recipetionList">
+
+            <th >{{rec.userId}}</th>
+            <th >{{rec.your}}</th>
+            <td><a href="" routerLink='reception/view-reception/{{rec.id}}' routerLinkActive="active">{{rec.firstName}}</a></td>
+            <td>{{rec.lastName}}</td>
+            <td>{{rec.dateOfBirth}}</td>
+            <td>{{rec.age}}</td>
+            <td>{{rec.patientGuardian}}</td>
+            <td>{{rec.martialStatus}}</td>
+            <td>{{rec.height}}</td>
+            <td>{{rec.weight}}</td>
+            <td> {{rec.consanguity}}</td>
+            <td> {{rec.gender}}</td>
+
+            <td>{{rec.lateralization}}</td>
+            <td>{{rec.occupation}}</td>
+            <td>{{rec.whatsNumber}}</td>
+            <td>{{rec.othernumber}}</td>
+            <td>{{rec.emailAddress}}</td>
+            <td>{{rec.address}}</td>
+          </tr>
+
+
+         <button class="btn btn-primary" routerLink='reception/view-reception/' routerLinkActive="active">View</button>
+        </tbody>
+      </table>
+</div>

@@ -1,0 +1,8 @@
+welcome to my project
+<app-header></app-header>
+
+<app-banner *ngIf="router.url=='/'"></app-banner>
+<app-course-features  *ngIf="router.url=='/'"></app-course-features>
+
+<router-outlet></router-outlet>
+<app-footer></app-footer>

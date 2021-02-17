@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,UAAU,CAAA;EACR,MAAM,EAAE,aAAa;CAEtB;;AACD,AAAA,KAAK,AAAA,WAAW,AAAA,WAAW,CAAA;EACzB,MAAM,EAAC,aAAa;CACrB",
+    "sources": [
+        "reciptionform.component.scss"
+    ],
+    "names": [],
+    "file": "reciptionform.component.css"
+}

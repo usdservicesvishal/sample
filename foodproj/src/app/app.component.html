@@ -1,5 +1,18 @@
-<app-header></app-header>
-<app-content></app-content>
-<app-footer></app-footer>
 
+<div class="wrapper">
+  <div class="sidebar" data-color="white" data-active-color="danger">
+    <app-sidebar>
+      </app-sidebar>
+    </div>
+
+    <div class="main-panel">
+  <app-header></app-header>
+
+  <div class="content">
+<app-content></app-content>
+</div>
 <router-outlet></router-outlet>
+
+</div>
+<app-footer></app-footer>
+</div>

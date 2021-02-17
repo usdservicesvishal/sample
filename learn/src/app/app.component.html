@@ -1,9 +1,33 @@
-<h1>hii welcome to tutorial</h1>
-<h4>ng switch example</h4>
-<div [ngSwitch]="switch value">
-<div *ngSwitchCase="1">value pass is one</div>
-<div *ngSwitchCase="2">value pass is two</div>
-<div *ngswitchcase="3">value pass is three</div>
-<div *ngswitchCase="4">value pass is 4</div>
-<div *ngSwitchDefault>this is default value</div>
+
+<div class="signup-form">
+  <form [formGroup]="signupForm" (ngSubmit)="postData();">
+  <h2>Sign Up</h2>
+  <p>Please fill in this form to create an account!</p>
+  <hr>
+      <div class="form-group">
+    <div class="row">
+      <div class="col"><input type="text" class="form-control" name="first_name" placeholder="First Name" required="required" formControlName="ufname"></div>
+      <div class="col"><input type="text" class="form-control" name="last_name" placeholder="Last Name" required="required"   formControlName="ulname"></div>
+    </div>
+      </div>
+      <div class="form-group">
+        <input type="email" class="form-control" name="email" placeholder="Email" required="required" formControlName="uemail">
+      </div>
+  <div class="form-group">
+          <input type="password" class="form-control" name="password" placeholder="Password" required="required" formControlName="upwd">
+      </div>
+  <div class="form-group">
+          <input type="password" class="form-control" name="confirm_password" placeholder="Confirm Password" required="required" formControlName="uconfirmpwd">
+      </div>
+      <div class="form-group">
+    <label class="form-check-label"><input type="checkbox" required="required" formControlName="agreeterm"> I accept the <a href="#">Terms of Use</a> &amp; <a href="#">Privacy Policy</a></label>
+  </div>
+  <div class="form-group">
+          <button type="submit"  value="post Data[disabled]=!signupForm.valid" class="btn btn-primary btn-lg">Sign Up</button>
+      </div>
+
+<div class="hint-text">Already have an account? <a href="#">Login here</a></div>
+
+
+
 <router-outlet></router-outlet>

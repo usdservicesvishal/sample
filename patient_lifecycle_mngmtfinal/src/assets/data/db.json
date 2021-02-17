@@ -1,0 +1,41 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "reception": [
+    {
+      "id": 1,
+      "firstName": "mahesh",
+      "lastName": "yadav",
+      "emailId": "y@gmaskmsm"
+    },
+    {
+      "name": "Ms.",
+      "id": 2,
+      "fName": "devram",
+      "lName": "dange",
+      "dob": "2021-03-03",
+      "gender": "Male.",
+      "Lateral": "Right",
+      "Religion": "Hinduism",
+      "Occupa": "nhiye",
+      "mobile": "98675465",
+      "emailAdd": "abc@gmail.com",
+      "addres": "ganore",
+      "number": "rtyuyuu",
+      "height": "65",
+      "weight": "98"
+    }
+  ]
+}
