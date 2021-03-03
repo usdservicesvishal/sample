@@ -1,0 +1,80 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "FruitStock": [
+    {
+      "fruitStockId": 1,
+      "FruitName": "apple",
+      "FruitQuantity": 5,
+      "FruitDateinTime": "5",
+      "FruitPrice": "5"
+    },
+    {
+      "FruitName": "",
+      "FruitQuantity": 0,
+      "FruitDateinTime": 0,
+      "FruitPrice": 0,
+      "id": 2
+    },
+    {
+      "FruitName": "",
+      "FruitQuantity": 0,
+      "FruitDateinTime": 0,
+      "FruitPrice": 0,
+      "id": 3
+    },
+    {
+      "FruitName": "",
+      "FruitQuantity": 0,
+      "FruitDateinTime": 0,
+      "FruitPrice": 0,
+      "id": 4
+    },
+    {
+      "FruitName": "",
+      "FruitQuantity": 0,
+      "FruitDateinTime": 0,
+      "FruitPrice": 0,
+      "id": 5
+    },
+    {
+      "fruitStockId": "",
+      "fruitName": "Banana",
+      "fruitQuantity": 3,
+      "fruitDateinTime": "2021-02-25",
+      "fruitPrice": "34",
+      "id": 6
+    },
+    {
+      "fruitStockId": "",
+      "fruitName": "Apple",
+      "fruitQuantity": 11,
+      "fruitDateinTime": "2021-02-13",
+      "fruitPrice": "90",
+      "id": 7
+    },
+    {
+      "fruitStockId": "",
+      "fruitName": "Banana",
+      "fruitQuantity": 12,
+      "fruitDateinTime": "2021-02-27",
+      "fruitPrice": "40",
+      "id": 8
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

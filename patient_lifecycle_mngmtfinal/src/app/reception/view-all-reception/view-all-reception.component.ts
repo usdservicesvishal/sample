@@ -8,7 +8,7 @@ import { ReceptionService } from '../reception.service';
   styleUrls: ['./view-all-reception.component.css']
 })
 export class ViewAllReceptionComponent implements OnInit {
-  recipetionList : Reception
+  recipetionList : Reception;
 
   constructor(private recepetionServices:ReceptionService) { }
 

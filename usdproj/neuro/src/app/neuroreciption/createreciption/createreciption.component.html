@@ -1,0 +1,230 @@
+
+<div class="container card o-hidden border-0 shadow-lg my-5">
+  <h3 class="bg-secondary d-flex justify-content-center" id="reciptionformcolor"> Reception Form</h3>
+   <hr>
+
+      <form  #addproductForm="ngForm" (ngSubmit)="addNewProduct(addproductForm)" class="user">
+   <!--check box-->
+   <div> <h3>{{message}}</h3></div><br><br><br>
+   Your:<div>
+       <div class="form-check form-check-inline">
+           <input class="form-check-input" type="radio" name="Ms" value="Ms" [(ngModel)]="userModel.your" id="inlineRadio1" value="Ms">
+           <label class="form-check-label" for="Ms">Ms.</label>
+         </div>
+         <div class="form-check form-check-inline">
+           <input class="form-check-input" type="radio" name="Mr" [(ngModel)]="userModel.your" id="inlineRadio2" value="Mr">
+           <label class="form-check-label" for="Mr">Mr.</label>
+         </div>
+         <div class="form-check form-check-inline">
+           <input class="form-check-input" type="radio" name="Mrs" [(ngModel)]="userModel.your" id="inlineRadio2" value="Mrs">
+           <label class="form-check-label" for="Mrs">Mrs.</label>
+         </div>
+         <div class="form-check form-check-inline">
+           <input class="form-check-input" type="radio" name="Master" [(ngModel)]="userModel.your" id="inlineRadio1" value="Master">
+           <label class="form-check-label" for="Master">Master.</label>
+         </div>
+       </div>
+         <!--check box-->
+        <!--First name >Last name date -->
+       <div class="row">
+           <div class="col-md-6 mb-3">
+             <label for="firstName">First name</label>
+             <input type="text" class="form-control form-control-user" id="firstName" placeholder="Enter your Firstname" name="firstName" [(ngModel)]="userModel.firstName" value="" required>
+             <div class="invalid-feedback">
+               Valid first name is required.
+             </div>
+           </div>
+           <div class="col-md-6 mb-3">
+             <label for="lastName">Last name</label>
+             <input type="text"class="form-control form-control-user" id="lastName" placeholder="Enter your Lastname" name="lastName"  [(ngModel)]="userModel.lastName" value="" required>
+             <div class="invalid-feedback">
+               Valid last name is required.
+             </div>
+           </div>
+
+           <div class="col-md-6 mb-3">
+               <label for="birthday">Birthday:  </label>&nbsp;
+               <input type="date" id="birthday" name="dateOfBirth"  [(ngModel)]="userModel.dateOfBirth" value="dateOfBirth">
+              </div>
+
+       </div>
+          <!--First name >Last name date -->
+<!-- <age start> -->
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="age">age</label>
+              <input type="text"class="form-control form-control-user" id="age" placeholder="age" value="age" name="age"  [(ngModel)]="userModel.age" required>
+              <div class="invalid-feedback">
+                Valid last name is required.
+              </div>
+            </div>
+
+<!-- <age end> -->
+<!-- <div class="row"> -->
+          <div class="col-md-6 mb-3">
+            <label for="lastName">Patient Guardian</label>
+            <input type="text"class="form-control form-control-user" id="lastName" placeholder="patientguardian" value="lastName" name="patientGuardian"  [(ngModel)]="userModel.patientGuardian" required>
+            <div class="invalid-feedback">
+              Valid last name is required.
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-3">
+            <label for="lastName">Marital Status</label>
+            <input type="text"class="form-control form-control-user" id="maritalstatus" placeholder="Married/UnMarried" value=""  name="martialStatus"  [(ngModel)]="userModel.martialStatus" required>
+            <div class="invalid-feedback">
+              Valid last name is required.
+            </div>
+          </div>
+<!-- </div> -->
+<!--
+  Consi
+Occupation -->
+   <!-- <div class="row"><hr> -->
+    <div class="col-md-6 mb-3">
+        <label for="firstName">Occupation </label>
+        <input type="text" class="form-control form-control-user"  id="" placeholder="Occupation" value="" name="occupation"  [(ngModel)]="userModel.occupation" required>
+        <div class="invalid-feedback">
+          Valid first name is required.
+        </div>
+      </div>
+</div><br>
+   <!--Occupation -->
+   Consanguity
+   <div>
+
+       <div class="form-check form-check-inline">
+           <input class="form-check-input" type="radio" name="Yes"  [(ngModel)]="userModel.consanguity"   id="inlineRadio1" value="Yes">
+           <label class="form-check-label" for="inlineRadio1">Yes</label>
+         </div>
+         <div class="form-check form-check-inline">
+           <input class="form-check-input" type="radio" name="No"  [(ngModel)]="userModel.consanguity"  id="inlineRadio2" value="No">
+           <label class="form-check-label" for="inlineRadio2">No</label>
+         </div>
+         </div>
+         <!-- <occupation close> -->
+
+
+          <!--heiht weight -->
+          <h5>BMI Calculation</h5>
+           <div class="form-group row">
+           <div class="col-md-6 mb-3">
+               <label for="firstName">Height</label>
+               <input type="text" class="form-control form-control-user" id="Height" placeholder="177cm" value=""value=""  name="Height"  [(ngModel)]="userModel.height" value="Height" required>
+               <div class="invalid-feedback">
+                 Valid first name is required.
+               </div>
+             </div>
+             <div class="col-md-6 mb-3">
+               <label for="lastName"> Weight</label>
+               <input type="text" class="form-control form-control-user" id="Weight" placeholder="67kg" name="Weight"  [(ngModel)]="userModel.weight"  value="Weight" required>
+               <div class="invalid-feedback">
+                 Valid last name is required.
+               </div>
+             </div>
+         </div>
+       <!--heiht weight -->
+
+          <!--Gender male female-->
+           Gender
+       <div>
+
+           <div class="form-check form-check-inline">
+               <input class="form-check-input" type="radio" name="Male"  [(ngModel)]="userModel.gender"   id="inlineRadio1" value="Male">
+               <label class="form-check-label" for="inlineRadio1">Male.</label>
+             </div>
+             <div class="form-check form-check-inline">
+               <input class="form-check-input" type="radio" name="Female"  [(ngModel)]="userModel.gender"  id="inlineRadio2" value="Female">
+               <label class="form-check-label" for="inlineRadio2">Female</label>
+             </div>
+             <div class="form-check form-check-inline">
+               <input class="form-check-input" type="radio"name="Other"  [(ngModel)]="userModel.gender" id="inlineRadio2" value="Other">
+               <label class="form-check-label" for="inlineRadio2">Other</label><hr>
+             </div>
+
+           </div>
+           <!--Gender male female-->
+
+
+
+           <!--Lateralization-->
+           <div><hr>
+               <p>Lateralization</p>
+               <div class="form-check form-check-inline">
+                   <input class="form-check-input" type="radio" name="Right"  [(ngModel)]="userModel.lateralization" id="inlineRadio1" value="Right">
+                   <label class="form-check-label" for="inlineRadio1">Right</label>
+                 </div>
+                 <div class="form-check form-check-inline">
+                   <input class="form-check-input" type="radio" name="" name="Left"  [(ngModel)]="userModel.lateralization" id="inlineRadio1" id="inlineRadio2" value="Left">
+                   <label class="form-check-label" for="inlineRadio2">Left</label>
+                 </div><hr>
+                 </div>
+           <!--Lateralization-->
+
+             <!--Religion selected -->
+           <!-- <div class="form-row">
+
+               <div class="form-group col-md-4">
+                 <label for="inputState">State</label>
+                 <select id="inputState" class="form-control">
+                   <option selected>Religion</option>
+                   <option>Hinduism</option>
+                   <option>Islam</option>
+                   <option>India</option>
+                   <option>Christianity</option>
+                   <option>Sikhism</option>
+                   <option>Buddhism</option>
+                   <option>Jainism</option>
+                   <option>USA</option>
+                   <option>Unaffiliated</option>
+                   <option>Others (Text)</option>
+
+                 </select>
+               </div>
+               </div>
+               Religion selected -->
+
+
+
+<!--mobile No -->
+<h5>Contact Details</h5>
+<div class="row"><hr>
+   <div class="col-md-6 mb-3">
+       <label for="What’s App mobile No">What’s App mobile No</label>
+       <input type="text" class="form-control form-control-user"  id="What’s" placeholder="ex -9876543210" name="wpnumber"  [(ngModel)]="userModel.whatsNumber" value="" required>
+       <div class="invalid-feedback">
+         Valid first name is required.
+       </div>
+     </div>
+     <div class="col-md-6 mb-3">
+       <label for="Communication Mobile No"> Communication Mobile No  </label>
+       <input type="text" class="form-control form-control-user"  id="Mobile" placeholder="ex -9876543210" value=""  name="othernumber"  [(ngModel)]="userModel.othernumber" value="" required>
+       <div class="invalid-feedback">
+         Valid last name is required.
+       </div>
+     </div>
+ </div>
+<!--mobile No  -->
+
+<!--mobile No -->
+<div class="row"><hr>
+   <div class="col-md-6 mb-3">
+       <label for="firstName">Email Id </label>
+       <input type="text" class="form-control form-control-user"  id="Address" placeholder="abc@gmail.com" value="" name="emailAddress"  [(ngModel)]="userModel.emailAddress" required>
+       <div class="invalid-feedback">
+         Valid first name is required.
+       </div>
+     </div>
+     <div class="col-md-6 mb-3">
+       <label for="lastName"> Address  </label>
+       <input type="text" class="form-control form-control-user"  id="Address" placeholder="Enter  your Current Address" value="pune" name="address"  [(ngModel)]="userModel.address"   required>
+       <div class="invalid-feedback">
+         Valid last name is required.
+       </div>
+     </div>
+ </div>
+ <button type="button" class="btn btn-primary btn-user btn-block" (click)="addNewProduct(addproductForm);">Submit Reception </button>
+
+   </form>
+ <b><hr></b>
+<!--mobile No  -->

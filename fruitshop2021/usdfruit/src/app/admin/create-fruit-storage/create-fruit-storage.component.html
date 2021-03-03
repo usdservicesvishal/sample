@@ -1,0 +1,77 @@
+
+<!-- <table class="table table-bordered  "> -->
+  <div class="container py-3 "  >
+                      <!-- form user info -->
+                      <div class="card "  >
+                          <div class="card-header">
+                              <h4 class="mb-0 text-center">Fruit Storage Page</h4>
+                          </div>
+                          <div class="card-body ">
+
+                            <form  #addproductForm="ngForm" (ngSubmit)="addNewProduct(addproductForm)" class="user"></form>
+                              <form class="form" role="form" autocomplete="off">
+
+
+   <div class="form-group row">
+                                      <label class="col-lg-3 col-form-label form-control-label">Fruit Name</label>
+                                      <div class="col-lg-9">
+                                          <select id="user_time_zone" class="form-control" size="0" name="fruitName" [(ngModel)]="fruitstock.fruitName">
+                                              <option value="Apple">Apple</option>
+                                              <option value="Annar">Annar</option>
+                                              <option value="Banana">Banana</option>
+                                              <option value="Orange">Orange</option>
+
+                                          </select>
+                                      </div>
+                                  </div>
+
+
+                                  <div class="form-group row">
+                                      <label class="col-lg-3 col-form-label form-control-label">Fruit Quantity</label>
+                                      <div class="col-lg-9">
+                                          <input class="form-control" type="number" value="" name="fruitQuantity" [(ngModel)]="fruitstock.fruitQuantity">
+                                      </div>
+                                  </div>
+                                  <div class="form-group row">
+                                      <label class="col-lg-3 col-form-label form-control-label">Fruit Date in Time:</label>
+                                      <div class="col-lg-9">
+                                          <input class="form-control" type="date" value=""  name="fruitDateinTime" [(ngModel)]="fruitstock.fruitDateinTime">
+                                      </div>
+                                  </div>
+                                  <div class="form-group row">
+                                      <label class="col-lg-3 col-form-label form-control-label">Fruit Price</label>
+                                      <div class="col-lg-9">
+                                          <input class="form-control" type="text"   name="fruitPrice" value="" [(ngModel)]="fruitstock.fruitPrice">
+                                      </div>
+                                  </div>
+<div class="row">
+<div class="col-6"> <input class="form-control btn btn-warning  float-right" type="reset" value="Reset" >&nbsp;&nbsp;&nbsp;
+ </div>
+  <div class="col-6">
+    <input class="form-control btn btn-success float-left" type="submit" (click)="addNewProduct(addproductForm)" value="Submit" ></div>
+
+</div>
+
+                                 <!-- <div class="form-group row  justify-content-center">
+                                      <label class="col-lg-3 col-form-label form-control-label"></label>
+                                      <div class="col-md-8-mb-3">
+
+                                        </div>
+                                  </div> -->
+
+                                     <!-- <div class="form-group row float-left">
+                                      <label class="col-lg-3 col-form-label form-control-label"></label>
+                                      <div class="col-md-12-mb-2">
+                                          <input class="form-control btn btn-warning" type="reset" value="Reset" >
+                                      </div>
+                                  </div> -->
+</form>
+
+                          </div>
+                      </div>
+                      <!-- /form user info -->
+          </div>
+
+  <!-- </table> -->
+
+

@@ -1,0 +1,32 @@
+<div id="demo">
+  <table class="table border=1table table-hover">
+      <thead>
+        <tr>
+          <th>userId</th>
+  <th>Fruit Name</th>
+  <th>Fruit Quantity</th>
+  <th>Fruit Date And Time</th>
+  <th>Fruit Price</th>
+
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let rec of fruitlist">
+
+          <td >{{rec.id}}</td>
+
+          <td><a  routerLink='../ViewallFruitStock/{{rec.id}}' routerLinkActive="active">{{rec.fruitName}}</a></td>
+          <td>{{rec.fruitQuantity}}</td>
+          <td>{{rec.fruitDateinTime|date}}</td>
+          <td>{{rec.fruitPrice|currency:"₹":0}}</td>
+
+
+        </tr>
+
+
+       <button class="btn btn-primary" routerLink='sidebar/ViewFruitStock' routerLinkActive="active">View</button>
+      </tbody>
+    </table>
+</div>
+

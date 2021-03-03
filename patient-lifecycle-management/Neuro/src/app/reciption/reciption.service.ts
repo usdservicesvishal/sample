@@ -10,45 +10,15 @@ import { Observable, of, Subject, throwError } from 'rxjs';
 export class ReciptionService {
 
   constructor(private http:HttpClient) { }
-Url="http://192.168.0.102:9191/receptionForm/";
- public doRegistration(reciption:Reciption){
-   return this.http.post(this.Url, reciption);
- }
-// userAdded=new Subject();
-// doRegistration(reciption:Reciption){
-//   console.log(reciption);
-//  return this.http.post("http://192.168.0.102:9191/receptionForm/",obj);
-// }
-
- public getUsers(reciption:Reciption){
-   return this.http.get("http://192.168.0.102:9191/getreceptionFormAllUsers/");
- }
-
- public DeleteUser(userId:number){
-return this.http.delete("http://192.168.0.102:9191//delete/{userId}" +userId);
-
- }
-
-//  public  getUserByEmail(email){
-// return this.http.get("");
-//  }
-
-//  informChild(){
-//    this.doRegistration.next();
-//  }
-
-
-// getUserData() {
-//   const url = '';
-//   return this.http.get(url);
-// }
-
-}
-
-
-
-
-// function obj(arg0: string, obj: any) {
-//   throw new Error('Function not implemented.');
-// }
-
+  createReception(user:Reciption):Observable<Reciption>{
+    const productUrl ="http://192.168.0.102:9191/receptionForm";
+ return this.http.post<Reciption>(productUrl ,user ); //return observeable
+  }
+  createProduct(productBoyd):Observable<Reciption>{
+    const productUrl = "http://192.168.0.102:9191/receptionForm";
+ return this.http.post<Reciption>(productUrl,productBoyd); //return observeable
+  }
+  deleteReception(productId):Observable<Reciption>{
+    const productUrl = "http://localhost:3000/reception/"+productId;
+ return this.http.delete<Reciption>(productUrl); //return observeable
+  }

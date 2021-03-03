@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { FormBuilder, NgForm } from '@angular/forms';
 import { Reception } from '../reception';
 import { ReceptionService } from '../reception.service';
 
@@ -12,7 +12,8 @@ export class CreateReceptionComponent implements OnInit {
   message:any;
   userModel = new Reception("","","","", "",0,"","",0,0,"","","","","",0,"","");
 
-  constructor( private receptionServices:ReceptionService) { }
+  constructor( private receptionServices:ReceptionService, private formBuilder:FormBuilder) { }
+  
 
   ngOnInit(): void {
   }

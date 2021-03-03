@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>dashboard</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ul class="">
+  <li *ngFor="let item of pages" >
+  <a [routerLink]="['/'+item.path]" routerLinkActive="router-link-active" > {{item.path}}</a>
+
+  </li>
+  </ul>
+</ion-content>

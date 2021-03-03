@@ -23,33 +23,22 @@ export class CreateReciptionComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  // public registerNow(addNewForm:NgForm){
-  //   let resp=this.service.doRegistration(this.reciption);
 
-  //  resp.subscribe((data)=>this.message=data);
-  //   console.log("added ...",addNewForm)
-  //   console.log("modelclass...",this.reciption)
-    // let obj =addNewForm.value;
-  //  obj.id=null;
-  //  this.service.doRegistration(obj).subscribe(response=>{
-  //    console.log("User Added Sucessfully");
-  //    addNewForm.form.reset();
-  //    this.service.informChild();
-  //  });
-
+  
 
   addNewProduct(addproductForm:NgForm){
 
 
 
-    this.reciption.createProduct(this.reciption).subscribe(data =>{
+    this.service.createProduct(this.reciption).subscribe(data =>{
       console.log('successfuly send to server..', data),
      error => console.log("Error????????....>>>>",error)
+     console.log(this.reciption)
 
 
 
       });
 
 
-  }
-}
+    }
+    }

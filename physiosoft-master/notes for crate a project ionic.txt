@@ -1,0 +1,1 @@
+import the ionic cdn link in app.componet.html
